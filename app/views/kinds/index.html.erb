@@ -1,0 +1,34 @@
+<div class="basic-grey">
+  <p id="notice"><%= notice %></p>
+  
+  <h1> <%= "#{t('message.listing')} #{@kinds.model_name.human(count: @kinds.count)}" %> </h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th><%= @kinds.human_attribute_name("description")%></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @kinds.each do |kind| %>
+        <tr style="background: <%= cycle('white','#F7F7F7') %>">
+          <td><%= kind.description %></td>
+          
+          <td><%= link_to t('buttons.show'), kind %></td>
+          <td><%= link_to t('buttons.edit'), edit_kind_path(kind) %></td>
+          <td><%= link_to t('buttons.destroy'), kind, method: :delete, data: { confirm: t('message.confirm') } %></td>
+          
+          </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
+  <%= paginate @kinds %>
+  
+  <br>
+  
+  <%= link_to t('buttons.new'), new_kind_path %>
+</div>
