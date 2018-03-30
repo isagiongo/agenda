@@ -2,3 +2,6 @@
   message:
     confirm: Tem certeza?
     listing: Listando
+    created: Registro criado com sucesso!
+    updated: Registro atualizado com sucesso!
+    destroyed: Registro excluído com sucesso!

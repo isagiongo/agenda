@@ -4,7 +4,7 @@ class KindsController < ApplicationController
   # GET /kinds
   # GET /kinds.json
   def index # nome do arquivo na  view
-    @kinds = Kind.all.page(params[:page]).order(:description).per(20) #SELECT  "kinds".* FROM "kinds"
+    @kinds = Kind.all.page(params[:page]).order(:description).per(10) #SELECT  "kinds".* FROM "kinds"
   end
 
   # GET /kinds/1

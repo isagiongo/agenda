@@ -6,6 +6,10 @@ gem 'rails', '4.2.7.1'
 
 gem 'rails-i18n'
 
+gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
+
+gem 'font-awesome-rails'
+
 gem 'lerolero_generator'
 
 gem 'cocoon'
